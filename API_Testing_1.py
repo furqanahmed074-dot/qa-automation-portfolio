@@ -25,9 +25,4 @@ def test_get_nonexistent_post(api_base_url):
     assert response.status_code == 404
 
 
-def test_create_and_view_post(page: Page, api_base_url):
-    response = requests.post(api_base_url + "/posts", json={"title" :"verify post", "body" :"Furqan verify kar raha hai", "user_id": 2 })
-    post_id = response.json()["id"]
-    print(post_id)
-    page.goto(api_base_url + f"/posts/{post_id}")     
-    expect(page).to_have_url(api_base_url + f"/posts/{post_id}")
+

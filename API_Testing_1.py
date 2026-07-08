@@ -1,6 +1,5 @@
 import pytest
 import requests
-from playwright.sync_api import Page, expect
 # response = requests.get("https://jsonplaceholder.typicode.com/posts/1")
 # print("Status Code: ", response.status_code)
 # assert response.status_code == 200
